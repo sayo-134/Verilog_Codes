@@ -17,7 +17,7 @@ This section discusses the data type used in Verilog.
 
 ## Vectors
 - nets or reg data types can be declared as vectors: multiple bit widths, if not specified then they are scalar
-- Declared as [_high#_:_low#_] or [_low#_:_high#_], left number is MSB
+- Declared as [_high#_ : _low#_] or [_low#_ : _high#_], left number is MSB
 
 ## Integer, Real, and Time Register Data Types
 
