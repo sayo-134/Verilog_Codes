@@ -1,5 +1,5 @@
 # **_Verilog Notes_**
-
+---
 # Verilog Data Types
 This section discusses the data type used in Verilog.
 
@@ -55,7 +55,7 @@ This section discusses the data type used in Verilog.
 - can be stored in **reg**
 - width must be large enough to hold the string
 - each character of string takes 8 bits(1 byte)
-
+---
 # System Tasks and Compiler Directives
 
 ## System Tasks
@@ -72,3 +72,15 @@ This section discusses the data type used in Verilog.
 
   - **\`define**: used to define text macros in Verilog
   - **\`include**: used to include entire contents of a Verilog source file in another file during compilation
+---
+# Port Connection Rules
+## Input
+- Internally: *net*
+- Externally: **reg** or *net*
+
+## Output
+- Internally: **reg** or *net*
+- Externally: **reg**
+
+## Inout
+- Internally and Externally: *net*
