@@ -55,3 +55,20 @@ This section discusses the data type used in Verilog.
 - can be stored in **reg**
 - width must be large enough to hold the string
 - each character of string takes 8 bits(1 byte)
+
+# System Tasks and Compiler Directives
+
+## System Tasks
+
+- **Displaying information**: $display
+- - adds newline at the end of the string
+- **Monitoring information**: $monitor
+- - $monitoron: enables monitoring
+- - $monitoroff: disables monitoring
+- **Stopping a simulation**: $stop
+- **Finishing a simulation**: $finish
+
+## Compiler Directives
+
+- - **\`define**: used to define text macros in Verilog
+- - **\`include**: used to include entire contents of a Verilog source file in another file during compilation
