@@ -60,13 +60,13 @@ This section discusses the data type used in Verilog.
 
 ## System Tasks
 
-- **Displaying information**: $display
+- Displaying information: **$display**
 - - adds newline at the end of the string
-- **Monitoring information**: $monitor
-- - $monitoron: enables monitoring
-- - $monitoroff: disables monitoring
-- **Stopping a simulation**: $stop
-- **Finishing a simulation**: $finish
+- Monitoring information: **$monitor**
+- - **$monitoron**: enables monitoring
+- - **$monitoroff**: disables monitoring
+- Stopping a simulation: **$stop**
+- Finishing a simulation: **$finish**
 
 ## Compiler Directives
 
