@@ -98,6 +98,12 @@ This section discusses the data type used in Verilog.
   - **always** : The **always** statement starts at time 0 and executes the statements in the block continuously in a looping fashion. This statement is used to model a block of activity that is repeated continuously in a digital circuit.
   ### Procedural Assignments
    - Procedural assignments update values of **reg**, **integer**, **real**, or **time** variables. The value placed on a variable will remain unchanged until another procedural assignment updates the variable with e different value. This are unlike continuous assignments, _dataflow modelling_.
-      - Blocking Assignment: using **=** : executes sequencially
-      - Non-blocking Assignment: using **<=** : execute simultaneously. This is used as a method to model several concurrent data transfers that take place after a common event in digital design. Pipeline modelling and mutually exclusive data transfer.
+      - Blocking Assignment: using **=** symbol: executes sequencially
+      - Non-blocking Assignment: using **<=** symbol: execute simultaneously. This is used as a method to model several concurrent data transfers that take place after a common event in digital design. Pipeline modelling and mutually exclusive data transfer.
       - - For digital design, use of non-blocking assignments in place of blocking assignments is highly recommended in places where concurrent data transfers take place after a common event. In such cases, blocking assignments can potentially cause race conditions because the final result depends on the order in whoch the assignments are evaluated. Non-blocking assignments can be used effectively to model concurrent data transfers because the final result is not dependent on the order in whoch the assignments are evaluated.
+
+  ### Timing Controls
+   - Delay-based timing control: using **#** symbol
+   - Event-based timing control: using **@()** symbol
+      - An event is triggered by using **->** symbol
+   - Level-sensitive timing control: using **wait** keyword
