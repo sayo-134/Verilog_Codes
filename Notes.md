@@ -1,5 +1,5 @@
 # **_Verilog Notes_**
-#### ***Book***: Verilog VHDL by Samir Palnitkar
+#### ***Book***: Verilog HDL: A Guideto Digital Design and Synthesis, _Samir Palnitkar_
 ---
 # Verilog Data Types
 This section discusses the data type used in Verilog.
