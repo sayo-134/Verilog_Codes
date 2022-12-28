@@ -1,2 +1,2 @@
 # Verilog_Codes
-Introductory codes for Verilog is here.
+Introductory codes for Verilog.
