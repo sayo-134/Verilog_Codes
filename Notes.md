@@ -90,3 +90,4 @@ This section discusses the data type used in Verilog.
 # Modelling Styles
 ## Gate Level Modelling
 ## Dataflow Modelling
+## Behavioral Modelling
