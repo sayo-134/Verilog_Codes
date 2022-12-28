@@ -10,6 +10,10 @@ module full_adder(sum, c_out, a, b, c_in);
   and a2(c2, s1, c_in);
   xor x3(c_out, c1, c2);
   
+  /*
+  assign {c_out, sum} = a + b + c_in;
+  */
+  
 endmodule
 
 module ripple_carry_adder(sum, c_out, a, b, c_in);
