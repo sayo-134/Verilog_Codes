@@ -89,5 +89,9 @@ This section discusses the data type used in Verilog.
 ---
 # Modelling Styles
 ## Gate Level Modelling
+  - Directly by using gates(e.g. and, nand, nor, or etc.)
 ## Dataflow Modelling
+  - By using expressions(&, |, ~, ^)
 ## Behavioral Modelling
+  ### Structured Procedures
+   - **initial** : An initial block starts at time 0, executes exactly once during a simulation, and then does not execute again. If there are multiple **inital** blocks, each block starts to execute concurrently at time 0. Each block finishes execution independently of other block. Multiple behavioral statements must be grouped, typically using the keywords **begin** and **end**, if there is only one behavioral statement, grouping is not needed. This is typically used for initialization, monitoring waveforms and other processes that must be executed only once during the entire simulation run.
