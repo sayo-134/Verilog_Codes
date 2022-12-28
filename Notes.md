@@ -1,4 +1,5 @@
 # **_Verilog Notes_**
+***Book***: Verilog VHDL by Samir Palnitkar
 ---
 # Verilog Data Types
 This section discusses the data type used in Verilog.
