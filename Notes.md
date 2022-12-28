@@ -94,7 +94,7 @@ This section discusses the data type used in Verilog.
   - By using expressions(&, |, ~, ^)
 ## Behavioral Modelling
   ### Structured Procedures
-   - **initial** : An **initial** block starts at time 0, executes exactly once during a simulation, and then does not execute again. If there are multiple **inital** blocks, each block starts to execute concurrently at time 0. Each block finishes execution independently of other block. Multiple behavioral statements must be grouped, typically using the keywords **begin** and **end**, if there is only one behavioral statement, grouping is not needed. This is typically used for initialization, monitoring waveforms and other processes that must be executed only once during the entire simulation run.
+   - **initial** : An **initial** block starts at time 0, executes exactly once during a simulation, and then does not execute again. If there are multiple **inital** blocks, each block starts to execute concurrently at time 0. Each block finishes execution independently of other block. Multiple behavioral statements must be grouped, typically using the keywords **begin** and **end**, if there is only one behavioral statement, grouping is not needed. An **begin-end** statement pair works like { } in C. This is typically used for initialization, monitoring waveforms and other processes that must be executed only once during the entire simulation run.
   - **always** : The **always** statement starts at time 0 and executes the statements in the block continuously in a looping fashion. This statement is used to model a block of activity that is repeated continuously in a digital circuit.
   ### Procedural Assignments
    - Procedural assignments update values of **reg**, **integer**, **real**, or **time** variables. The value placed on a variable will remain unchanged until another procedural assignment updates the variable with e different value. This are unlike continuous assignments, _dataflow modelling_.
@@ -104,6 +104,12 @@ This section discusses the data type used in Verilog.
 
   ### Timing Controls
    - Delay-based timing control: using **#** symbol
-   - Event-based timing control: using **@()** symbol
+   - Event-based timing control: using **@( )** symbol
       - An event is triggered by using **->** symbol
    - Level-sensitive timing control: using **wait** keyword
+  ### Conditional Statements
+   - using **if**
+   - using **if-else**
+   - using **if-else if-else**
+  ### Multiway Branching
+ 
