@@ -112,4 +112,6 @@ This section discusses the data type used in Verilog.
    - using **if-else**
    - using **if-else if-else**
   ### Multiway Branching
- 
+   - The keywords **case**, **endcase**, **default** are used.
+   - **casex** and **casez** are also used.
+  ### Loops
