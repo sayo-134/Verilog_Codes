@@ -59,3 +59,41 @@ module stimulus;
       #5 A = 4'd10; B = 4'd5; C_IN = 1'b1;
     end
 endmodule
+
+
+module ripple_adder(sum, co, a0, a1, ci);
+  
+  // parameter declaration. This can be redefined.
+  parameter N = 4;
+  
+  // Port declaration
+  output [N-1:0] sum;
+  output co;
+  input [N-1:0] a0, a1;
+  input ci;
+  
+  // Local wire declaration
+  wire [N-1:0] carry;
+  
+  // assign 0th bit of carry equal to carry input
+  assign carry[0] = ci;
+  
+  /* 
+  declare a temporary loop variable. This variable is used only in the evaluation of generate blocks. This variable does not exist during the simulation of a 
+  Verilog design because the generate loops are unrolled before simulation
+  */
+  genvar i;
+  
+  // generate the bit-wise xor with a single loop
+  generate for(i=0; i<N; i++) begin: r_loop
+    wire t1, t2, t3;
+    xor g1(t1, a0[i], a1[i]);
+    xor g2(sum[i], t1, carry[i]);
+    and g3(t2, a0[i], a1[i]);
+    and g4(t3, t1, carry[i]);
+    or  g5(carry[i+1], t2, t3);
+  end
+  endgenerate
+  
+  assign co = carry[N];
+endmodule
