@@ -108,10 +108,22 @@ This section discusses the data type used in Verilog.
       - An event is triggered by using **->** symbol
    - Level-sensitive timing control: using **wait** keyword
   ### Conditional Statements
-   - using **if**
-   - using **if-else**
-   - using **if-else if-else**
+   - using **if** (like C)
+   - using **if-else** (like C)
+   - using **if-else if-else** (like C)
   ### Multiway Branching
    - The keywords **case**, **endcase**, **default** are used.
    - **casex** and **casez** are also used.
   ### Loops
+   - using **while** (like C)
+   - using **for** (like C)
+   - **repeat**: This helps to execute the loop a fixed number of times, it cannot beused to loop on a general logical expression(**while** is used in such case). A **repeat** construct must contain a number, which can be a constant, a variable or a signal value. However, if the number is a variable or signal value, it is evaluated only when the loop starts and not during the execution.
+   - **forever**: The loop does not contain any expression and executes forever until the **$finish** task is encountered. It can be exited by using **$disable** statement.
+  ### Sequential and Parallel Blocks
+  - #### Sequential Blocks:
+      - **begin-end** is used to group statements in sequential block. The statements in this block are executed in the order they are mentioned.
+  - #### Parallel Blocks:
+      - **fork-join** is used to specify parallel block.The statements in this block are executed concurrently. Thus, order is not important.
+  - ### Special features of blocks:
+      - Blocks can be nested. Sequential and parallel blocks can be mixed.
+      - Blocks can be given names. Naming of blocks can be useful to be accessed by using hierarchical name referencing. Also, their execution can be disabled by **disable _block name_** statement.
