@@ -124,6 +124,6 @@ This section discusses the data type used in Verilog.
       - **begin-end** is used to group statements in sequential block. The statements in this block are executed in the order they are mentioned.
   - #### Parallel Blocks:
       - **fork-join** is used to specify parallel block.The statements in this block are executed concurrently. Thus, order is not important.
-  - ### Special features of blocks:
+  - #### Special features of blocks:
       - Blocks can be nested. Sequential and parallel blocks can be mixed.
       - Blocks can be given names. Naming of blocks can be useful to be accessed by using hierarchical name referencing. Also, their execution can be disabled by **disable _block name_** statement.
