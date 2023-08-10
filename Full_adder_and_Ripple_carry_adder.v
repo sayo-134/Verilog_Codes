@@ -85,7 +85,7 @@ module ripple_adder(sum, co, a0, a1, ci);
   genvar i;
   
   // generate the bit-wise xor with a single loop
-  generate for(i=0; i<N; i++) begin: r_loop
+  generate for(i=0; i<N; i= i+1) begin: r_loop
     wire t1, t2, t3;
     xor g1(t1, a0[i], a1[i]);
     xor g2(sum[i], t1, carry[i]);
